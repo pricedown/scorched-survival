@@ -1,0 +1,4 @@
+name: scorched-survival
+version: '${project.version}'
+main: pricedown.scorchedsurvival.Scorched_survival
+api-version: 1.19
