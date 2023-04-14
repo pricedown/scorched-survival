@@ -6,7 +6,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.Objects;
 
-import static pricedown.scorchedsurvival.utilities.BroadcastMessage.broadcastMessage;
+import static pricedown.scorchedsurvival.utilities.ServerBroadcast.serverBroadcast;
 
 public class NotifyTimeOfDay extends BukkitRunnable {
     private boolean wasDay = isDay();
@@ -15,10 +15,10 @@ public class NotifyTimeOfDay extends BukkitRunnable {
         boolean isDay = isDay();
         if (wasDay != isDay) {
             if (isDay) {
-                broadcastMessage(ChatMessageType.ACTION_BAR, "§7It turns day.");
+                serverBroadcast(ChatMessageType.ACTION_BAR, "§7It turns day.");
             }
             else {
-                broadcastMessage(ChatMessageType.ACTION_BAR, "§8It turns night.");
+                serverBroadcast(ChatMessageType.ACTION_BAR, "§8It turns night.");
             }
 
             wasDay = isDay;
